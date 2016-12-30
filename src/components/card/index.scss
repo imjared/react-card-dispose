@@ -1,0 +1,35 @@
+.card {
+    border: 1px solid #ddd;
+    padding: 40px;
+    display: inline-block;
+    position: fixed;
+    height: 100px;
+    width: 200px;
+    top: calc( 50% - ( 100 / 2 * 1px ) );
+    left: calc( 50% - ( 200 / 2 * 1px );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin: 0;
+    }
+}
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition-property: opacity, top, left;
+}
+
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave.slide-leave-active {
+  opacity: 0.01;
+  transform: translate3d( -150%, -150%, 0 ) rotate( -35deg );
+  transition-property: opacity, top, left, -webkit-transform, transform;
+}
